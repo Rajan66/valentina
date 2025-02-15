@@ -1,5 +1,6 @@
 import React from "react";
 import Image from "next/image";
+import { StaticImageData } from "next/image";
 
 import { Card, CardHeader, CardTitle } from "../card";
 import Link from "next/link";
@@ -7,7 +8,7 @@ import Link from "next/link";
 type PlaylistCardProps = {
     title: string;
     link: string;
-    image: any;
+    image: StaticImageData;
 };
 
 const PlaylistCard = ({ title, link, image }: PlaylistCardProps) => {

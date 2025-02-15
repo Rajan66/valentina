@@ -9,7 +9,6 @@ type SadButtonProps = {
 };
 
 export default function SadButton({ title, handleNoClick }: SadButtonProps) {
-    const [isHovered, setIsHovered] = useState(false);
     const [isClicked, setIsClicked] = useState(false);
     const [cryingFaces, setCryingFaces] = useState<
         { id: string; broken: boolean; top: number; left: number }[]
@@ -20,7 +19,6 @@ export default function SadButton({ title, handleNoClick }: SadButtonProps) {
     });
 
     const handleHoverStart = () => {
-        setIsHovered(true);
         const newFaces = Array.from({ length: 10 }, (_, index) => ({
             id: `${Date.now()}-${Math.random()}-${index}`,
             broken: false,
@@ -31,7 +29,6 @@ export default function SadButton({ title, handleNoClick }: SadButtonProps) {
     };
 
     const handleHoverEnd = () => {
-        setIsHovered(false);
         setCryingFaces((prev) => prev.map((face) => ({ ...face, broken: true })));
 
         setTimeout(() => setCryingFaces([]), 500);
