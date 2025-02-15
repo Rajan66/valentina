@@ -21,6 +21,7 @@ const page = () => {
                     <TooltipTrigger>
                         <Link
                             href={`https://www.youtube.com/playlist?list=PLqAlkKEKiKiyfMYYC_LZNeL4rzS52_vLX`}
+                            target="_blank"
                         >
                             <Button>{`Go to playlist (this is real i swear lmao)`}</Button>
                         </Link>
