@@ -1,7 +1,9 @@
 import type { Metadata } from "next";
 import { Courgette } from "next/font/google";
-import "./globals.css";
+
 import { ToastContainer } from "react-toastify";
+
+import "./globals.css";
 
 const courgette = Courgette({
     variable: "--font-courgette",
