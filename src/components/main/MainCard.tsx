@@ -25,7 +25,6 @@ const MainCard = () => {
     const [isYes, setIsYes] = useState<boolean>(false);
     const [isHidden, setIsHidden] = useState<boolean>(true);
     const [text, setText] = useState<string>(titleList[0]);
-    const [index, setIndex] = useState<number>(0);
 
     const handleYesClick = () => {
         setIsYes(true);

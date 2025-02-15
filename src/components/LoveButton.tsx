@@ -8,13 +8,11 @@ type LoveButtonProps = {
     handleClick: () => void;
 };
 export default function LoveButton({ title, handleClick }: LoveButtonProps) {
-    const [isHovered, setIsHovered] = useState(false);
     const [hearts, setHearts] = useState<
         { id: string; broken: boolean; top: number; left: number }[]
     >([]);
 
     const handleHoverStart = () => {
-        setIsHovered(true);
         const newHearts = Array.from({ length: 10 }, (_, index) => ({
             id: `${Date.now()}-${Math.random()}-${index}`,
             broken: false,
@@ -25,7 +23,6 @@ export default function LoveButton({ title, handleClick }: LoveButtonProps) {
     };
 
     const handleHoverEnd = () => {
-        setIsHovered(false);
         setHearts((prev) => prev.map((heart) => ({ ...heart, broken: true })));
 
         setTimeout(() => setHearts([]), 500);

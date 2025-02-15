@@ -1,5 +1,4 @@
 import MainCard from "@/components/main/MainCard";
-import LoveButton from "@/components/LoveButton";
 
 export default function Home() {
     return (
