@@ -169,7 +169,7 @@ const MainCard = () => {
                                 <h2 className="text-lg text-pretty text-secondary opacity-60">
                                     <p>
                                         I shall take your hands,{" "}
-                                        <span className="text-2xl">even</span> they are
+                                        <span className="text-2xl">even if</span> they are
                                         <span className="text-2xl"> cold af</span>
                                     </p>{" "}
                                     <span>
